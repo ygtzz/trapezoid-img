@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>梯形图片示例</title>
+    <style>
+        .banner{background-image:url(./imgs/baseline_banner_img.jpg);height:380px;
+                background-size: contain;/*图片完全包含*/
+                background-position:100%;/*图片在容器右侧全显示*/
+                overflow:hidden}
+        .banner-inner{
+            width:70%;
+            height:100%;
+            background:linear-gradient(to right,#48cfad 5%,#3bafda 90%);
+            transform:skew(-30deg);
+            margin-left: -110px;
+        }
+        .container{width:90%;margin:0 auto;overflow:hidden;margin-top:50px;}
+        .pic1-wrap{width:45%;transform:skew(-30deg,0);overflow:hidden;padding-left:160px;
+         margin-left:-160px;float:left;height:500px;}
+        .pic1-wrap img{transform:skew(30deg,0)}
+        .pic2-wrap{width:40%;transform:skew(-30deg,0);overflow:hidden;float:left;height:500px;
+         margin-left:20px;}
+        .pic2-wrap img{transform:skew(30deg,0);margin-left:-280px}
+    </style>
+</head>
+
+<body style="height:1800px;">
+    <div>
+        内部块skew覆盖背景图方式
+    </div>
+    <div class="banner">
+        <div class="banner-inner"></div>
+    </div>
+    <div>
+        图片容器skew，图片反向skew，调整容器或图片的width,margin-left,padding-left来显示图片
+    </div>
+    <div class="container">
+        <div class="pic1-wrap">
+            <img src="./imgs/scenery1.jpg" alt="scenery1" />
+        </div>
+        <div class="pic2-wrap">
+            <img src="./imgs/scenery2.jpg" alt="scenery2" />
+        </div>
+    </div>
+</body>
+
+</html>
